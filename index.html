@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TDEE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+     <div class="container">
+        <form name="calculate">
+          <h1 class="display-4">TDEE Calculator</h1>
+          <!-- Imperial/Metric -->
+          <div class="form-group measure">
+             <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active" id="imperial">
+                   <input type="radio" name="imperial" autocomplete="off" checked> Imperial
+                </label>
+                <label class="btn btn-primary" id="metric">
+                   <input type="radio" name="metric" autocomplete="off"> Metric
+                </label>
+             </div>
+          </div>
+          <!-- Gender -->
+          <div class="form-group gender">
+             <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-secondary active" id="male">
+                   <input type="radio" name="options" autocomplete="off" checked> Male
+                </label>
+                <label class="btn btn-secondary">
+                   <input type="radio" name="options" id="female" autocomplete="off"> Female
+                </label>
+             </div>
+          </div>
+          <!-- Age -->
+          <div class="form-group">
+             <div class="input-group age">
+                <input type="number" required class="form-control age" id="age" placeholder="" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">yr</span>
+             </div>
+          </div>
+          <!-- Height (ft) -->
+          <div class="row height">
+             <div class="col">
+                <div class="form-group">
+                   <div class="input-group">
+                      <input type="number" required class="form-control age" id="feet" placeholder="" aria-describedby="basic-addon2">
+                      <span class="input-group-addon" id="basic-addon2">ft</span>
+                   </div>
+                </div>
+             </div>
+             <div class="col">
+                <div class="form-group">
+                   <div class="input-group">
+                      <input type="number" max="12" required class="form-control age" id="inches" placeholder="" aria-describedby="basic-addon2">
+                      <span class="input-group-addon" id="basic-addon2">in</span>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- Height (metric) -->
+          <div class="form-group height-metric">
+             <div class="input-group">
+                <input type="number" required class="form-control height-metric" placeholder="" id="height-metric" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">cm</span>
+             </div>
+          </div>
+          <!-- Weight (lb) -->
+          <div class="form-group weight">
+             <div class="input-group weight">
+                <input type="number" required class="form-control" id="weight" placeholder="" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">lb</span>
+             </div>
+          </div>
+          <!-- Weight (kg) -->
+          <div class="form-group weight-metric">
+             <div class="input-group weight-metric">
+                <input type="number" required class="form-control age" id="weight-metric" placeholder="" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">kg</span>
+             </div>
+          </div>
+          <!-- Activity Selector -->
+             <select class="form-control col" name="activity" id="select">
+                <option value="1.2"><b>Sedentary</b><small>  (No exercise/Desk Job)</small></option>
+                <option value="1.375"><b>Lightly Active</b><small>  (Exercise 1-3 days/week)</small></option>
+                <option selected="selected" value="1.55"><b>Moderately Active</b><small>  (Exercise 3-5 days/week)</small></option>
+                <option value="1.725"><b>Very Active</b><small>  (Exercise 6-7 days/week)</small></option>
+                <option value="1.9"><b>Extremely Active</b><small>  (Exercise twice daily + physical job)</small></option>
+             </select>
+          <!-- Goal -->
+          <div class="btn-group goal" name="selectgoal" data-toggle="buttons">
+             <label class="btn btn-secondary" data-value="-500">
+                <input type="radio" name="options" id="lose" autocomplete="off" checked> Lose Weight
+             </label>
+             <label class="btn btn-secondary active" data-value="0">
+                <input type="radio" name="options" id="maintain"  autocomplete="off"> Maintain
+             </label>
+             <label class="btn btn-secondary" data-value="500">
+                <input type="radio" name="options" id="gain" autocomplete="off"> Gain Muscle
+             </label>
+          </div>
+          <!-- Calculate -->
+          <div class="row">
+             <button type="submit" class="btn btn-lg btn-success">Calculate</button>
+          </div>
+        </form>
+     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
